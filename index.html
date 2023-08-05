@@ -16,34 +16,46 @@
         <h1>Weather Dashboard</h1>
    </header>
    <main class="wrapper container">
-<!-- Left Column -->
-<div class="row">
-  <section class="left-col col-4 col-md-4 col-xs-3">
-    <div class="search">
-      <h2>Search for a City:</h2>
-    <form id="search-form">
-      <div class="mb-3 mt-3">
-        <input name="search" id="input-search" type="text" autofocus="true" class="form-input" placeholder="Nashville, TN"/>
-      </div>
-      <button type="submit" class="btn custom-btn">Search</button>
-    </form>
-  </div>
+      <!-- Left Column -->
+      <div class="row">
+        <section class="left-col col-4 col-md-4 col-xs-3">
+          <div class="search">
+            <h2>Search for a City:</h2>
+          <form id="search-form">
+            <div class="mb-3 mt-3">
+              <input name="search" id="input-search" type="text" autofocus="true" class="form-input" placeholder="Nashville"/>
+            </div>
+            <button type="submit" class="btn custom-btn">Search</button>
+          </form>
+        </div>
 
-<div class="history"></div>
-</div>
-</section>
-<!-- Right Column -->
-<div class="row">
-  <section class="right-col col">
-    <div class="today-cast"></div>
-    <div class="5day-cast"></div>
-  </section>
-</div>
+        <!-- Modal Window for Alert on form -->
+      <div id="modal" class="modal">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <p id="modal-message"></p>
+          </div>
+      </div>
+
+      <!-- History of Results -->
+      <div class="history"></div>
+      </div>
+      </section>
+
+      <!-- Right Column -->
+      <div class="row">
+        <section class="right-col col-8 col-md-8 col-xs-9">
+          <div class="today-cast"></div>
+          <div class="5day-cast"></div>
+        </section>
+      </div>
+
    </main>
+
 <!-- Scripts -->
    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/scripts.js"></script>
 
   </body>
 </html>
