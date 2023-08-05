@@ -44,6 +44,8 @@ Used the following for API info and other aspects needed for development: [OpenW
 
 Used Bootstrap Docs: [Bootstrap](https://getbootstrap.com)
 
+Asked AskBCS a question about an error I was getting and received help from username chong.
+
 
 ## License
 

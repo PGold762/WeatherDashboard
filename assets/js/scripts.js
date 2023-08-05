@@ -22,7 +22,7 @@ var getWeatherApi = function (city) {
     var apiUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + city + ',' + 'US' + '&limit=5' + '&appid=3ae860ddb5e34b2d1628f39024bdcf22';
 
     fetch(apiUrl)
-        .then(function (response)
+        .then(function (response) {
         if (response.ok) {
             console.log(response);
             response.json().then(function (data) {
@@ -36,7 +36,7 @@ var getWeatherApi = function (city) {
         .catch(function (error) {
             displayModal('Unable to connect to Weather API');
         });
-
+    }
 // Modal Function
 function displayModal(message) {
     var modal = document.getElementById('modal');
