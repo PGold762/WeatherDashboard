@@ -15,25 +15,30 @@
     <header class="header">
         <h1>Weather Dashboard</h1>
    </header>
-   <main class="wrapper">
+   <main class="wrapper container">
 <!-- Left Column -->
-<section class="left-col">
-  <div class="search">
-    <h2>Search for a City:</h2>
-  <form>
-    <input name="search" id="search" type="text" autofocus="true" class="form-input" placeholder="Nashville, TN"/>
-    <button type="submit" class="btn">Search</button>
-  </form>
-</div>
+<div class="row">
+  <section class="left-col col-4 col-md-4 col-xs-3">
+    <div class="search">
+      <h2>Search for a City:</h2>
+    <form id="search-form">
+      <div class="mb-3 mt-3">
+        <input name="search" id="input-search" type="text" autofocus="true" class="form-input" placeholder="Nashville, TN"/>
+      </div>
+      <button type="submit" class="btn custom-btn">Search</button>
+    </form>
+  </div>
 
 <div class="history"></div>
-
+</div>
 </section>
 <!-- Right Column -->
-<section class="right-col">
-  <div class="today-cast"></div>
-  <div class="5day-cast"></div>
-</section>
+<div class="row">
+  <section class="right-col col">
+    <div class="today-cast"></div>
+    <div class="5day-cast"></div>
+  </section>
+</div>
    </main>
 <!-- Scripts -->
    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

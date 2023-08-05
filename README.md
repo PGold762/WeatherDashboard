@@ -42,6 +42,7 @@ Used the following to help with fetch commands: [Mozilla](https://developer.mozi
 
 Used the following for API info and other aspects needed for development: [OpenWeatherMap](https://openweathermap.org/)
 
+Used Bootstrap Docs: [Bootstrap](https://getbootstrap.com)
 
 
 ## License

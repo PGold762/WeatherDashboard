@@ -1,0 +1,23 @@
+.header {
+    width: 100%;
+    text-align:center;
+    background-color: rgb(13, 13, 151);
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+main {
+
+
+}
+.left-col
+
+.custom-btn {
+    background-color: var(--blue);
+    color: var(--white);
+  }
+  
+  .custom-btn:hover {
+    background-color: var(--dark-blue);
+    color: var(--white);
+  }
