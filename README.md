@@ -46,6 +46,12 @@ Used Bootstrap Docs: [Bootstrap](https://getbootstrap.com)
 
 Asked AskBCS a question about an error I was getting and received help from username chong.
 
+Used the following to understand Modal: [W3Schools.com](https://www.w3schools.com/howto/howto_css_modals.asp)
+
+Used the following to learn destructuring: [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+
+Used the following to learn template literals: [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+
 
 ## License
 
