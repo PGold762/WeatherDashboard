@@ -52,6 +52,12 @@ Used the following to learn destructuring: [Mozilla](https://developer.mozilla.o
 
 Used the following to learn template literals: [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 
+Received help from tutor Andrew Tirpok
+
+Used the following for inserting the weather icon: [StackOverflow](https://stackoverflow.com/questions/44177417/how-to-display-openweathermap-weather-icon)
+
+
+
 
 ## License
 
