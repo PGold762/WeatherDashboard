@@ -12,7 +12,7 @@ main {
 }
 .left-col
 
-.custom-btn {
+/* .custom-btn {
     background-color: var(--blue);
     color: var(--white);
   }
@@ -20,7 +20,7 @@ main {
   .custom-btn:hover {
     background-color: var(--dark-blue);
     color: var(--white);
-  }
+  } */
 
   /* Modal Styling */
 .modal {
