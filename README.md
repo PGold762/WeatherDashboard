@@ -30,11 +30,11 @@ Download the files from the repo and install on domain. Should work instantly.
 
 This is a responsive website that presents a weather dashboard. You're able to search by city and be presented with current day forecast and 5 day forecast.
 
-Link to view: [Weather Dashboard](https://pgold762.github.io/TimedQuiz/)
+Link to view: [Weather Dashboard](https://pgold762.github.io/WeatherDashboard/)
 
 Screenshot of website: 
 
-![Weather Dashboard](./assets/images/timed-quiz.png "Weather")
+![Weather Dashboard](./assets/images/mod6-screencap.png "Weather Dashboard")
 
 ## Credits
 
@@ -55,9 +55,6 @@ Used the following to learn template literals: [Mozilla](https://developer.mozil
 Received help from tutor Andrew Tirpok
 
 Used the following for inserting the weather icon: [StackOverflow](https://stackoverflow.com/questions/44177417/how-to-display-openweathermap-weather-icon)
-
-
-
 
 ## License
 
