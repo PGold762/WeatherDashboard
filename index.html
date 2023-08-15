@@ -15,21 +15,21 @@
     <header class="header">
         <h1>Weather Dashboard</h1>
    </header>
-   <main class="wrapper container">
+   <main class="wrapper container row">
       <!-- Left Column -->
-      <div class="row">
-        <section class="left-col col-4 col-md-4 col-xs-3">
+      <div id="left-side" class="col col-12 col-md-312 col-xs-12 col-lg-3 col-xl-3">
+        <section class="col left-col">
           <div class="search">
             <h2>Search for a City:</h2>
           <form id="search-form">
             <div class="mb-3 mt-3">
               <input name="search" id="input-search" type="text" autofocus="true" class="form-input" placeholder="Nashville"/>
             </div>
-            <button type="submit" class="">Search</button>
+            <button type="submit" class="search-btn btn btn-primary">Search</button>
           </form>
-          <hr width="50%" />
+          <hr width="100%" />
         </div>
-
+      
         <!-- Modal Window for Alert on form -->
       <div id="modal" class="modal">
           <div class="modal-content">
@@ -40,17 +40,17 @@
 
       <!-- History of Results -->
       <div id="history" class="history"></div>
-      </div>
       </section>
-
+    </div> <!-- End Left Column -->
       <!-- Right Column -->
-      <div class="row">
-        <section class="right-col col-8 col-md-8 col-xs-9">
-          <div id="current-weather" class="today-cast"></div>
-          <div id="fiveday" class="5day-cast"></div>
-        </section>
+      <div id="right-side" class="col col-12 col-md-12 col-xs-12 col-lg-9 col-xl-9">
+        <div class="row">
+          <div id="current-weather" class="col col-12 col-md-12 col-xs-12 col-lg-12 col-xl-12"></div>
+          </div>
+          <div id="fiveday" class="row">
+          </div>
       </div>
-
+    
    </main>
 
 <!-- Scripts -->

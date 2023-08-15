@@ -33,15 +33,13 @@ var getWeatherData = function (city) {
             addToSearchHistory(city);
     
             // Fetch current weather data
-            var currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&exclude=daily,minutely,hourly,alerts&appid=${apiKey2}`;
+            var currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&mode=json&exclude=daily,minutely,hourly,alerts&appid=${apiKey2}`;
     
     
             fetch(currentWeatherUrl)
             .then(function (response) {
             if (response.ok) {
-                console.log(response);
                 response.json().then(function (data) {
-                  console.log(data);
                   displayCurrentWeather(data);
                 });
               } else {
@@ -53,14 +51,12 @@ var getWeatherData = function (city) {
             });
     
             // Fetch 5 day weather data
-            var fivedayWeatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=5&units=imperial&exclude=current,minutely,hourly,alerts&appid=${apiKey2}`;
+            var fivedayWeatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=5&units=imperial&&mode=json&exclude=current,minutely,hourly,alerts&appid=${apiKey1}`;
     
             fetch(fivedayWeatherUrl)
             .then(function (response) {
             if (response.ok) {
-                console.log(response);
                 response.json().then(function (data) {
-                console.log(data);
                 displayFiveDayWeather(data);
                 });
             } else {
@@ -83,10 +79,12 @@ var getWeatherData = function (city) {
     
 
         var weatherHTML = `
-          <h2>${city} (${formattedDate}) <img src="https://openweathermap.org/img/wn/${icon}.png"></h2>
-          <p>Temperature: ${fahrenheitTemp}°F</p>
-          <p>Humidity: ${data.main.humidity}%</p>
-          <p>Wind Speed: ${data.wind.speed} m/s</p>
+          <div class="today-cast col col-12 col-md-12 col-xs-12 col-lg-12 col-xl-12">
+          <h2 class="text-center">${city} (${formattedDate}) <img src="https://openweathermap.org/img/wn/${icon}.png"></h2>
+          <p class="text-center">Temperature: ${fahrenheitTemp}°F</p>
+          <p class="text-center">Humidity: ${data.main.humidity}%</p>
+          <p class="text-center">Wind Speed: ${data.wind.speed} m/s</p>
+          </div>
           `;
 
         currentWeatherDiv.innerHTML = weatherHTML;
@@ -94,7 +92,7 @@ var getWeatherData = function (city) {
       // Function to display 5day weather data
       function displayFiveDayWeather(data) {
         var fiveDayWeatherDiv = document.getElementById('fiveday');
-        var fiveDayWeatherHTML = `<h2>5-Day Forecast:</h2>`;
+        var fiveDayWeatherHTML = `<h2 class="5day-h text-center">5-Day Forecast:</h2>`;
 
         // Loop through the data for each day
         for (var i = 0; i < data.list.length; i++) {
@@ -104,12 +102,12 @@ var getWeatherData = function (city) {
             var fahrenheitTemp = data.list[i].main.temp;
     
             fiveDayWeatherHTML += `
-            <div>
-            <p>Date: ${formattedDate}</p>
-            <p><img src="https://openweathermap.org/img/wn/${icon}.png"></p>
-            <p>Temp: ${fahrenheitTemp}°F</p>
-            <p>Humidity: ${data.list[i].main.humidity}%</p>
-            <p>Wind: ${data.list[i].wind.speed} m/s</p>
+            <div class="day-single col col-12 col-md-12 col-xs-12 col-lg-2 col-xl-2">
+            <p class="text-center font-weight-bold">Date: ${formattedDate}</p>
+            <p class="text-center"><img src="https://openweathermap.org/img/wn/${icon}.png"></p>
+            <p class="text-center">Temp: ${fahrenheitTemp}°F</p>
+            <p class="text-center">Humidity: ${data.list[i].main.humidity}%</p>
+            <p class="text-center">Wind: ${data.list[i].wind.speed} m/s</p>
             </div>
             `;
         }
@@ -159,6 +157,7 @@ function displayModal(message) {
     var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
         for (var i = 0; i < searchHistory.length; i++) {
         var searchHistoryItem = document.createElement('button');
+        searchHistoryItem.className = "search-btn btn btn-secondary";
         searchHistoryItem.textContent = searchHistory[i];
         searchHistoryDiv.appendChild(searchHistoryItem);
         }
@@ -178,6 +177,7 @@ function displayModal(message) {
         
             for (var i=0; i < searchHistory.length ; i++) {
             var searchHistoryItem = document.createElement('button');
+            searchHistoryItem.className = "search-btn btn btn-secondary";
             searchHistoryItem.textContent = searchHistory[i];
             searchHistoryDiv.appendChild(searchHistoryItem);
             }

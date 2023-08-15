@@ -6,11 +6,46 @@
     padding: 20px 0;
     margin-bottom: 20px;
 }
-main {
 
-
+h2 {
+  margin: 10px 0;
+  text-align: center;
 }
-.left-col
+
+.wrapper {
+  margin: 0 auto;
+  width: 95%;
+}
+
+.form-input {
+  width: 100%;
+  text-align: center;
+}
+
+.search-btn {
+  width: 100%;
+  margin: 5px 0;
+}
+
+#left-side {
+ border: 1px solid black;
+ padding-bottom: 10px;
+}
+
+/* Current Day Styles */
+.today-cast {
+  background-color: lightblue;
+  padding: 10px 0;
+  margin: 20px 0;
+}
+
+/* 5 Day Styles */
+.day-single {
+  background-color: darkblue;
+  color: white;
+  margin: 10px 10px;
+  padding: 10px 0;
+}
 
 /* .custom-btn {
     background-color: var(--blue);
